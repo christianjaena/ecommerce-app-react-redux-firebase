@@ -11,7 +11,6 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/users/UsersActions';
 import { selectCurrentUser } from './redux/users/UserSelector';
-
 import { auth, createUserProfileDocument } from './firebase/FirebaseUtils';
 import { createStructuredSelector } from 'reselect';
 
@@ -30,7 +29,6 @@ class App extends React.Component {
 							...snapShot.data(),
 						},
 					});
-					console.log(this.state);
 				});
 			} else {
 				setCurrentUser(userAuth);
