@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './SignUp.scss';
 import { auth, createUserProfileDocument } from '../../firebase/FirebaseUtils';
 import FormInput from '../FormInput/FormInput';
 import CustomButton from '../CustomButton/CustomButton';
 import TitleHeader from '../TitleHeader/TitleHeader';
 
+import {SignUpContainer} from './SignUp.styled'
 export class SignUp extends Component {
 	constructor() {
 		super();
@@ -50,7 +50,7 @@ export class SignUp extends Component {
 	render() {
 		const { displayName, email, password, confirmPassword } = this.state;
 		return (
-			<div className='sign-up'>
+			<SignUpContainer>
 				<TitleHeader
 					title='I do not have an account'
 					subtitle='Sign up with your email and password'
@@ -90,7 +90,7 @@ export class SignUp extends Component {
 					/>
 					<CustomButton type='submit'>SIGN UP</CustomButton>
 				</form>
-			</div>
+			</SignUpContainer>
 		);
 	}
 }

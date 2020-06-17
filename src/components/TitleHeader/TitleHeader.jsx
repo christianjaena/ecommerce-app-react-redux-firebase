@@ -1,11 +1,12 @@
 import React from 'react';
+import {TitleHeaderContainer} from './TitleHeader.styled'
 
 const TitleHeader = ({ title, subtitle }) => {
 	return (
-		<div className='title-header'>
+		<TitleHeaderContainer>
 			<h2 className='title'>{title}</h2>
 			<span>{subtitle}</span>
-		</div>
+		</TitleHeaderContainer>
 	);
 };
 
